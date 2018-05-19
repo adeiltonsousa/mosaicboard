@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 
-import './styles/app.css';
+import './styles/app.css'
 
-import reducers from './reducers';
-import { routes } from './routes';
+import reducers from './reducers'
+import { routes } from './routes'
 
-function configureStore(initialState) {
-  const enhancer = compose(applyMiddleware(thunk));
+function configureStore (initialState) {
+  const enhancer = compose(applyMiddleware(thunk))
 
-  return createStore(reducers, initialState, enhancer);
+  return createStore(reducers, initialState, enhancer)
 }
 
-const store = configureStore({});
+const store = configureStore({})
 
 class App extends Component {
-  render() {
-    return(
+  render () {
+    return (
       <Provider store={store}>
         <Router>
           <Switch>
@@ -29,8 +29,8 @@ class App extends Component {
           </Switch>
         </Router>
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App

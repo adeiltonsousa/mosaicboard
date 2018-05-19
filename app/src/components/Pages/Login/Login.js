@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
-import Empty from '../../Layout/Empty';
+import Empty from '../../Layout/Empty'
 
-import './Login.css';
+import './Login.css'
 
 class Login extends Component {
-  render() {
+  render () {
     return (
       <Empty>
-        <div className="login">
+        <div className='login'>
           <h1>MosaicBoard</h1>
 
           <form>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" className="form-control" />
+            <div className='form-group'>
+              <label htmlFor='email'>Email</label>
+              <input type='email' name='email' className='form-control' />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" name="password" className="form-control" />
+            <div className='form-group'>
+              <label htmlFor='password'>Password</label>
+              <input type='password' name='password' className='form-control' />
             </div>
 
-            <div className="form-group form-group-button">
-              <div className="form-group-button-description">
-                <NavLink to="/reset_password">Forgot Password?</NavLink>
+            <div className='form-group form-group-button'>
+              <div className='form-group-button-description'>
+                <NavLink to='/reset_password'>Forgot Password?</NavLink>
               </div>
 
               {/*
@@ -34,21 +34,21 @@ class Login extends Component {
               </button>
               */}
 
-              <NavLink to="/dashboard" className="button button-primary button-right">
+              <NavLink to='/dashboard' className='button button-primary button-right'>
                 Login
               </NavLink>
             </div>
           </form>
 
-          <div className="btn-signup">
-            <NavLink to="/signup">
+          <div className='btn-signup'>
+            <NavLink to='/signup'>
               Don't have a login? Click here to sign up!
             </NavLink>
           </div>
         </div>
       </Empty>
-    );
+    )
   }
 }
 
-export default Login;
+export default Login

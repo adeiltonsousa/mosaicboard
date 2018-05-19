@@ -1,0 +1,1 @@
+  C:\projetos\mosaicboard\app\src\registerServiceWorker.js:77:3: 'fetch' is not defined.
